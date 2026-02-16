@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAALVA C.A. | Traslados Médicos San Diego</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --azul-saalva: #8dbde6; /* El azul de tu ambulancia */
+            --azul-oscuro: #2c5282;
+            --verde-saalva: #a8d5ba; /* El verde de las manos en tu logo */
+            --rojo-medico: #e53e3e;
+            --blanco: #ffffff;
+            --gris-claro: #f8fafc;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #2d3748;
+            background-color: var(--blanco);
+        }
+
+        /* Navegación */
+        nav {
+            background: var(--blanco);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo-container img {
+            height: 60px; /* Ajusta según prefieras */
+            width: auto;
+        }
+
+        .nav-phone {
+            color: var(--azul-oscuro);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            border: 2px solid var(--azul-saalva);
+            padding: 8px 15px;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .nav-phone:hover {
+            background: var(--azul-saalva);
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 100px 5% 60px;
+            text-align: center;
+            background: linear-gradient(180deg, #eef6ff 0%, #ffffff 100%);
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            color: var(--azul-oscuro);
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            color: #4a5568;
+        }
+
+        .cta-button {
+            background: #25d366;
+            color: white;
+            padding: 18px 35px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.2rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.2);
+            transition: 0.3s;
+        }
+
+        .cta-button:hover { transform: translateY(-3px); box-shadow: 0 15px 25px rgba(37, 211, 102, 0.3); }
+
+        /* Servicios */
+        .servicios { padding: 60px 5%; background: var(--gris-claro); }
+        .section-title { text-align: center; margin-bottom: 40px; color: var(--azul-oscuro); font-size: 2rem; }
+
+        .grid-servicios {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            border-bottom: 5px solid var(--azul-saalva);
+            transition: 0.3s;
+        }
+
+        .card i { font-size: 3rem; color: var(--azul-saalva); margin-bottom: 20px; }
+        .card h3 { margin-bottom: 15px; font-size: 1.4rem; }
+
+        /* Ubicación */
+        .info-extra { padding: 60px 5%; text-align: center; }
+        .info-box {
+            background: var(--azul-oscuro);
+            color: white;
+            padding: 40px;
+            border-radius: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* Footer */
+        footer { background: #1a202c; color: white; padding: 40px 5%; text-align: center; }
+
+        /* Botón Flotante */
+        .float-ws {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25d366;
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 35px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            z-index: 1000;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 1.8rem; }
+            .nav-phone { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo-container">
+            <img src="logo.jpg" alt="SAALVA C.A. Logo">
+        </div>
+        <a href="tel:+584141437998" class="nav-phone"><i class="fas fa-phone"></i> 0414-1437998</a>
+    </nav>
+
+    <section class="hero">
+        <h1>Traslados Médicos en San Diego y Valencia</h1>
+        <p>En <strong>SAALVA C.A.</strong> ofrecemos un servicio humanizado y profesional. Estamos ubicados en San Diego para atenderte con la rapidez que tu familia merece.</p>
+        <a href="https://wa.me/584141437998?text=Hola,%20necesito%20un%20servicio%20de%20traslado%20médico" class="cta-button">
+            <i class="fab fa-whatsapp"></i> Solicitar Ambulancia
+        </a>
+    </section>
+
+    <section class="servicios">
+        <h2 class="section-title">Nuestros Servicios</h2>
+        <div class="grid-servicios">
+            <div class="card">
+                <i class="fas fa-hospital-user"></i>
+                <h3>Traslados Locales</h3>
+                <p>Movilización segura dentro de San Diego y toda la Gran Valencia.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-route"></i>
+                <h3>Traslados Nacionales</h3>
+                <p>Viajes extraurbanos (fuera de Carabobo) con unidades preparadas.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-clock"></i>
+                <h3>Disponibilidad</h3>
+                <p>Atención inmediata para altas médicas, estudios y emergencias.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="info-extra">
+        <div class="info-box">
+            <h2>Ubicación y Cobertura</h2>
+            <p style="margin: 20px 0;">📍 Ubicados estratégicamente en <strong>San Diego, Edo. Carabobo</strong>.</p>
+            <p>Brindamos soluciones de transporte sanitario con el compromiso de salvar vidas y cuidar tu bienestar.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p><strong>SAALVA C.A. - Traslados Médicos</strong></p>
+        <p>San Diego, Venezuela</p>
+        <p style="margin-top: 15px; font-size: 0.9rem; opacity: 0.7;">&copy; 2024 Todos los derechos reservados.</p>
+    </footer>
+
+    <a href="https://wa.me/584141437998" class="float-ws" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+</body>
+</html>
