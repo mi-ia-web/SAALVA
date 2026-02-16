@@ -9,9 +9,9 @@
     
     <style>
         :root {
-            --azul-saalva: #1e40af; /* Azul corporativo fuerte */
-            --celeste-saalva: #8dbde6; /* Azul claro complementario */
-            --verde-saalva: #2ecc71; /* Verde para WhatsApp */
+            --azul-saalva: #1e40af;
+            --celeste-saalva: #8dbde6;
+            --verde-saalva: #2ecc71;
             --blanco: #ffffff;
             --gris-fondo: #f1f5f9;
             --texto-oscuro: #1e293b;
@@ -30,11 +30,13 @@
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
             position: sticky; top: 0; z-index: 1000;
         }
-        /* TAMAÑO DEL LOGO AJUSTADO */
-        .logo-container img { height: 140px; width: auto; } 
+        
+        /* LOGO MÁS GRANDE */
+        .logo-container img { height: 180px; width: auto; } 
+        
         .nav-phone { color: var(--azul-saalva); text-decoration: none; font-weight: 700; font-size: 1.2rem; }
 
-        /* --- HERO SECTION (Bannner Principal) --- */
+        /* --- HERO SECTION --- */
         .hero {
             background: linear-gradient(rgba(30, 64, 175, 0.85), rgba(30, 64, 175, 0.7)), 
                         url('https://images.unsplash.com/photo-1587745416684-47953f16f02f?auto=format&fit=crop&w=1920&q=80');
@@ -43,9 +45,15 @@
             text-align: center; color: white; padding: 0 5%;
         }
         .hero h1 { font-size: 2.8rem; margin-bottom: 1rem; line-height: 1.2; }
+        
+        /* BOTÓN DE SOLICITUD MÁS PEQUEÑO Y ESTILIZADO */
         .btn-ws {
-            background: var(--verde-saalva); color: white; padding: 18px 40px; border-radius: 50px;
-            text-decoration: none; font-weight: 700; font-size: 1.2rem; display: inline-flex; align-items: center; gap: 10px;
+            background: var(--verde-saalva); color: white; 
+            padding: 12px 30px; /* Reducido de 18px 40px */
+            border-radius: 50px;
+            text-decoration: none; font-weight: 600; 
+            font-size: 1.05rem; /* Reducido de 1.2rem */
+            display: inline-flex; align-items: center; gap: 10px;
             box-shadow: 0 10px 20px rgba(46, 204, 113, 0.3); transition: 0.3s;
         }
         .btn-ws:hover { transform: scale(1.05); background: #27ae60; }
@@ -53,7 +61,7 @@
         /* --- SECCIONES GENERALES --- */
         .section-padding { padding: 80px 5%; }
         
-        /* --- IDENTIDAD (Misión/Visión) --- */
+        /* --- IDENTIDAD --- */
         .identidad { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; background: var(--gris-fondo); }
         .identidad-card { background: white; padding: 40px; border-radius: 15px; border-top: 5px solid var(--celeste-saalva); box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
         .identidad-card h2 { color: var(--azul-saalva); margin-bottom: 20px; }
@@ -74,15 +82,13 @@
         /* --- FOOTER --- */
         footer { padding: 60px 5%; background: #0f172a; color: white; text-align: center; }
         
-        /* --- BOTÓN FLOTANTE WHATSAPP --- */
-        .float-ws { position: fixed; bottom: 30px; right: 30px; background: #25d366; width: 70px; height: 70px; border-radius: 50%; display: flex; justify-content: center; align-items: center; color: white; font-size: 38px; box-shadow: 0 5px 20px rgba(0,0,0,0.3); z-index: 1000; transition: 0.3s; }
-        .float-ws:hover { transform: scale(1.1); }
+        /* --- BOTÓN FLOTANTE --- */
+        .float-ws { position: fixed; bottom: 30px; right: 30px; background: #25d366; width: 65px; height: 65px; border-radius: 50%; display: flex; justify-content: center; align-items: center; color: white; font-size: 35px; box-shadow: 0 5px 20px rgba(0,0,0,0.3); z-index: 1000; transition: 0.3s; }
 
-        /* --- RESPONSIVE (Celulares) --- */
         @media (max-width: 768px) {
             .identidad { grid-template-columns: 1fr; }
             .hero h1 { font-size: 2rem; }
-            .logo-container img { height: 90px; } /* Logo más pequeño en celular */
+            .logo-container img { height: 120px; } /* Ajuste para móviles */
             .nav-phone { font-size: 1rem; }
         }
     </style>
@@ -98,78 +104,73 @@
 
     <header class="hero">
         <h1>Tu Salud en Movimiento,<br>Seguridad en cada Kilómetro</h1>
-        <p style="margin-bottom: 30px; font-size: 1.1rem; max-width: 800px;">Traslados médicos especializados en San Diego, Valencia y a nivel nacional con soporte de oxígeno continuo y atención profesional 24/7.</p>
+        <p style="margin-bottom: 30px; font-size: 1.1rem; max-width: 800px;">Traslados médicos especializados en San Diego, Valencia y a nivel nacional con soporte de oxígeno continuo 24/7.</p>
         <a href="https://wa.me/584141437998?text=Hola,%20necesito%20información%20sobre%20un%20traslado%20médico" class="btn-ws">
-            <i class="fab fa-whatsapp"></i> Solicitar Ambulancia Ahora
+            <i class="fab fa-whatsapp"></i> Solicitar Ambulancia
         </a>
     </header>
 
     <section class="section-padding identidad">
         <div class="identidad-card">
             <h2>Misión</h2>
-            <p>Brindar un servicio de traslado médico de emergencia rápido, seguro y eficiente, salvaguardando la vida de nuestros pacientes mediante atención profesional y equipamiento especializado, garantizando tranquilidad a las familias en cada kilómetro del recorrido.</p>
+            <p>Brindar un servicio de traslado médico de emergencia rápido, seguro y eficiente, salvaguardando la vida de nuestros pacientes mediante atención profesional y equipamiento especializado.</p>
         </div>
         <div class="identidad-card">
             <h2>Visión</h2>
-            <p>Convertirnos en el referente principal de traslados médicos en la región, destacados por nuestra puntualidad, la modernidad de nuestras unidades y el compromiso inquebrantable con la salud y bienestar de nuestra comunidad.</p>
+            <p>Convertirnos en el referente principal de traslados médicos en la región, destacados por nuestra puntualidad, modernidad y compromiso inquebrantable.</p>
         </div>
     </section>
 
     <section class="section-padding">
         <h2 style="text-align: center; color: var(--azul-saalva); font-size: 2.5rem;">Nuestros Servicios Especializados</h2>
-        <p style="text-align: center; margin-top: 10px; color: #64748b;">Soluciones integrales de transporte sanitario en Carabobo.</p>
         <div class="grid-servicios">
             <div class="service-card">
                 <i class="fas fa-ambulance"></i>
                 <h3>Traslados de Emergencia 24/7</h3>
-                <p>Atención inmediata para situaciones críticas que requieren transporte rápido a centros hospitalarios. Estamos listos cuando el tiempo es vital.</p>
+                <p>Atención inmediata para situaciones críticas que requieren transporte rápido a centros hospitalarios.</p>
             </div>
             <div class="service-card">
                 <i class="fas fa-lungs"></i>
                 <h3>Soporte de Oxígeno Continuo</h3>
-                <p>Unidad equipada con sistemas de oxígeno medicinal certificados para pacientes con insuficiencia respiratoria o ventilación asistida.</p>
+                <p>Unidad equipada con sistemas de oxígeno medicinal certificados para pacientes con insuficiencia respiratoria.</p>
             </div>
             <div class="service-card">
                 <i class="fas fa-calendar-check"></i>
                 <h3>Traslados Programados</h3>
-                <p>Coordinamos citas médicas, diálisis o altas hospitalarias con la misma rigurosidad, asegurando comodidad y puntualidad en el destino.</p>
+                <p>Coordinamos citas médicas, diálisis o altas hospitalarias con máxima puntualidad y confort.</p>
             </div>
         </div>
     </section>
 
     <section class="section-padding testimonios">
-        <h2 style="font-size: 2.5rem;">Lo que dicen nuestros pacientes</h2>
-        <p style="margin-top: 10px; opacity: 0.9;">La confianza de las familias de San Diego es nuestro mejor aval.</p>
+        <h2 style="font-size: 2.5rem;">Confianza y Profesionalismo</h2>
         <div class="testimonial-container">
             <div class="testimonial-item">
                 <div class="stars">★★★★★</div>
-                <p>"Excelente servicio en San Diego. Llegaron puntual para el traslado de emergencia de mi padre y el trato de los paramédicos fue muy humano y profesional. 100% recomendados."</p>
-                <br><strong>- Familia Rodríguez (San Diego)</strong>
+                <p>"Excelente servicio en San Diego. Llegaron puntual para el traslado de mi padre. Trato muy humano."</p>
+                <br><strong>- Familia Rodríguez</strong>
             </div>
             <div class="testimonial-item">
                 <div class="stars">★★★★★</div>
-                <p>"La ambulancia está impecable y muy bien equipada. El soporte de oxígeno fue constante durante todo el traslado extraurbano. Nos brindaron mucha seguridad."</p>
+                <p>"La ambulancia impecable. El soporte de oxígeno fue constante. Nos brindaron mucha seguridad."</p>
                 <br><strong>- Carlos Mendoza</strong>
             </div>
             <div class="testimonial-item">
                 <div class="stars">★★★★★</div>
-                <p>"Contratamos a SAALVA C.A. para los traslados programados de diálisis de mi madre y ha sido la mejor decisión. Son puntuales, amables y muy cuidadosos."</p>
-                <br><strong>- María Elena G. (Valencia)</strong>
+                <p>"Puntuales y muy cuidadosos con los traslados programados de diálisis. La mejor opción en Valencia."</p>
+                <br><strong>- María Elena G.</strong>
             </div>
         </div>
     </section>
 
     <footer>
         <h2 style="color: var(--celeste-saalva); margin-bottom: 15px;">SAALVA C.A.</h2>
-        <p style="font-size: 1.1rem;">Servicio Profesional de Ambulancia y Traslados Médicos.</p>
-        <div style="margin: 30px 0;">
-            <p><i class="fas fa-map-marker-alt" style="color: var(--celeste-saalva);"></i> Sede Principal: <strong>San Diego, Edo. Carabobo, Venezuela.</strong></p>
-            <p style="margin-top: 10px;"><i class="fas fa-phone" style="color: var(--celeste-saalva);"></i> Emergencias y Contrataciones: <strong>+58 414-1437998</strong></p>
-        </div>
-        <p style="font-size: 0.9rem; opacity: 0.5; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px;">© 2026 SAALVA C.A. - Todos los derechos reservados.</p>
+        <p><i class="fas fa-map-marker-alt" style="color: var(--celeste-saalva);"></i> <strong>San Diego, Edo. Carabobo, Venezuela.</strong></p>
+        <p style="margin-top: 10px;"><i class="fas fa-phone" style="color: var(--celeste-saalva);"></i> <strong>+58 414-1437998</strong></p>
+        <p style="font-size: 0.9rem; opacity: 0.5; margin-top: 20px;">© 2026 SAALVA C.A. - Todos los derechos reservados.</p>
     </footer>
 
-    <a href="https://wa.me/584141437998?text=Hola,%20vengo%20de%20su%20página%20web%20y%20necesito%20información." class="float-ws" target="_blank" aria-label="Contactar por WhatsApp">
+    <a href="https://wa.me/584141437998" class="float-ws" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
 
